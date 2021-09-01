@@ -14,7 +14,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 
-public class Server {
+public class ServerAuth {
     public void createHttpServer() throws NullPointerException {
 
         String uri = Config.SERVER_PATH + "/authorize" +
@@ -31,7 +31,6 @@ public class Server {
                     exchange -> {
 
                         String query = exchange.getRequestURI().getQuery();
-                        System.out.println(query);
                         String request;
                         if (query != null && query.contains("code")) {
                             Config.AUTH_CODE = query.substring(5);

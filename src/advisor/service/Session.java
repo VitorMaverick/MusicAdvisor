@@ -26,11 +26,12 @@ public class Session {
         }
         if (command.equals("auth")) {
 
-            Server server = new Server();
+            ServerAuth server = new ServerAuth();
             server.createHttpServer();
             server.authRequest();
 
             while(Config.ACCESS_TOKEN != "" ){
+                System.out.println(Config.ACCESS_TOKEN);
                 factory.execute();
             }
 

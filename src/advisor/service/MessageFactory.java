@@ -16,11 +16,7 @@ public class MessageFactory {
 
             switch (input) {
                 case ("featured"):
-                    strategy = new Featured("featured", "---FEATURED---\n" +
-                            "Mellow Morning\n" +
-                            "Wake Up and Smell the Coffee\n" +
-                            "Monday Motivation\n" +
-                            "Songs to Sing in the Shower");
+                    strategy = new Featured("featured", Client.featured());
                     break;
                 case ("new"):
                     strategy= new NewAlbums("new", "---NEW RELEASES---\n" +
